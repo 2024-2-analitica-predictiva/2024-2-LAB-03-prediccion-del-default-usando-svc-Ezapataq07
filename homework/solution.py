@@ -22,11 +22,11 @@ class Lab01:
         self.columnas_categoricas = ['SEX','EDUCATION','MARRIAGE']
 
         self.param_grid = {
-            'svm__C': [13.5],
-            'svm__kernel': ['rbf'],
-            'svm__degree': [2],
-            'svm__gamma': ['auto'],#, 'auto'],
-            'selectk__k': range(4,5),
+            'svm__C': [1,12,13.5],
+            'svm__kernel': ['rbf','linear'],
+            'svm__degree': [2,3],
+            'svm__gamma': ['auto'],
+            'selectk__k': range(2,6),
             'selectk__score_func': [f_classif]#,mutual_info_classif,chi2]
         }
 
