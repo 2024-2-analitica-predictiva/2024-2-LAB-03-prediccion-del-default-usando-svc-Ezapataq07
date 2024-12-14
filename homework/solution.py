@@ -41,7 +41,7 @@ class Lab01:
         pipeline = self.make_pipeline(SVC(random_state=2024))
         estimator = self.make_grid_search(pipeline, 'balanced_accuracy', StratifiedKFold(n_splits=10,shuffle=True))
         estimator = estimator.fit(X_train, y_train)
-        #estimator = self.save_model_if_best(estimator, X_train, y_train)
+        estimator = self.save_model_if_best(estimator, X_train, y_train)
         print(estimator.best_params_)
         y_train_pred = estimator.predict(X_train)
         y_test_pred = estimator.predict(X_test) 
